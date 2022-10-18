@@ -5,7 +5,16 @@
 #ifndef MRDS_UC_H
 #define MRDS_UC_H
 
+#include <string.h>
+#include <vector>
+#include <class.h>
 
+class UC{
+    public UC(int code);
+    public vector<Class> classes;
+    public int code;
+    public string toString();
+};
 
 
 
