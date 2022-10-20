@@ -9,12 +9,14 @@
 #include <vector>
 #include "lecture.h"
 #include "student.h"
+#include "uc.h"
 
 class Class {
     public:
         std::vector<Lecture*> lectures;
         std::vector<Student*> students;
         std::string name;
+        UC* cadeira;
         Class(std::string name);
 };
 

@@ -18,5 +18,5 @@ Lecture::Lecture(std::string classCode, std::string day, float startTime, float 
 }
 
 std::string Lecture::toString(){
-    return(this->classCode);
+    return(this->classCode + " " + this->classType);
 }

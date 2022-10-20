@@ -2,6 +2,7 @@
 // Created by luism on 18/10/2022.
 //
 #include <string>
+#include "uc.h"
 
 UC::UC(int code){
     this->code = code;

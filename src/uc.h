@@ -10,10 +10,11 @@
 #include "lecture.h"
 
 class UC{
-    public UC(int code);
-    public vector<Class> classes;
-    public int code;
-    public string toString();
+    public:
+        UC(int code);
+        std::vector<Class> classes;
+        int code;
+        std::string toString();
 };
 
 

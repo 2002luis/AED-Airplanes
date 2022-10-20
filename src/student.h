@@ -7,13 +7,13 @@
 
 #include <string>
 #include <vector>
-#include "lecture.h"
+#include "class.h"
 
 class Student{
     public:
         std::string name;
         unsigned long int num;
-        std::vector<Lecture> classes;
+        std::vector<Class*> classes;
         Student(std::string name, unsigned long int num);
     
 };
