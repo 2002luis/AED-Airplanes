@@ -7,7 +7,7 @@
 
 #include <string>
 #include <vector>
-#include <lecture.h>
+#include "lecture.h"
 
 class Student{
     public:
