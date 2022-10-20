@@ -7,12 +7,12 @@
 
 #include <string.h>
 #include <vector>
-#include "lecture.h"
+#include "Class.h"
 
 class UC{
     public:
         UC(int code);
-        std::vector<Class> classes;
+        std::vector<Class*> classes;
         int code;
         std::string toString();
 };

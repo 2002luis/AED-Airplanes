@@ -6,7 +6,7 @@
 #define PROJC_CLASS_H
 
 #include <string>
-#include <student.h>
+#include "student.h"
 
 
 class Lecture{

@@ -6,9 +6,9 @@
 #define AED_TIMETABLE_H
 
 #include <vector>
-#include "student.h"
-#include "class.h"
-#include "lecture.h"
+#include "Student.h"
+#include "Class.h"
+#include "Lecture.h"
 
 class Timetable {
     public:
