@@ -7,16 +7,17 @@
 
 #include <string.h>
 #include <vector>
-#include "Class.h"
+
+#include "Class_Hour.h"
 
 class UC{
     public:
         UC(int code);
-        std::vector<Class*> classes;
+        std::vector<Class_Hour*> classes;
         int code;
         std::string toString();
 };
 
 
 
-#endif MRDS_UC_H
+#endif

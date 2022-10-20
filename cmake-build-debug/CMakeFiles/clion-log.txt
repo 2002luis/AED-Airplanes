@@ -1,26 +1,4 @@
 /home/feld/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" -S /home/feld/Documents/Projetos/AED -B /home/feld/Documents/Projetos/AED/cmake-build-debug
-CMake Warning (dev) in CMakeLists.txt:
-  No cmake_minimum_required command is present.  A line of code such as
-
-    cmake_minimum_required(VERSION 3.23)
-
-  should be added at the top of the file.  The version specified may be lower
-  if you wish to support older CMake versions for this project.  For more
-  information run "cmake --help-policy CMP0000".
-This warning is for project developers.  Use -Wno-dev to suppress it.
-
 -- Configuring done
-CMake Error at CMakeLists.txt:21 (add_executable):
-  Cannot find source file:
-
-    src/main.cpp
-
-  Tried extensions .c .C .c++ .cc .cpp .cxx .cu .mpp .m .M .mm .ixx .cppm .h
-  .hh .h++ .hm .hpp .hxx .in .txx .f .F .for .f77 .f90 .f95 .f03 .hip .ispc
-
-
-CMake Error at CMakeLists.txt:21 (add_executable):
-  No SOURCES given to target: schedule
-
-
-CMake Generate step failed.  Build files cannot be regenerated correctly.
+-- Generating done
+-- Build files have been written to: /home/feld/Documents/Projetos/AED/cmake-build-debug

@@ -3,7 +3,7 @@
 //
 
 #include <string>
-#include "lecture.h"
+#include "Lecture.h"
 
 Lecture::Lecture(std::string classCode, std::string day, float startTime, float duration, std::string classType){
     this->classCode = classCode;

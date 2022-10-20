@@ -7,18 +7,18 @@
 
 #include <vector>
 #include "Student.h"
-#include "Class.h"
+#include "Class_Hour.h"
 #include "Lecture.h"
 
 class Timetable {
     public:
         std::vector<std::vector<std::string>> horario;
         Timetable(Lecture lecture);
-        Timetable(Class turma); //class é uma palavra reservada
+        Timetable(Class_Hour turma); //class é uma palavra reservada
         Timetable(Student student);
         bool add(const Timetable a);
 };
 
 
-#endif AED_TIMETABLE_H
+#endif
 

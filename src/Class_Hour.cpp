@@ -3,3 +3,7 @@
 //
 
 #include "Class_Hour.h"
+
+Class_Hour::Class_Hour(std::string name) {
+    this->name = name;
+}

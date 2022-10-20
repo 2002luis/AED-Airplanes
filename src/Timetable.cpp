@@ -2,7 +2,7 @@
 // Created by feld on 20-10-2022.
 //
 
-#include "timetable.h"
+#include "Timetable.h"
 #include <vector>
 #include <string>
 #include <iostream>
@@ -18,7 +18,7 @@ Timetable::Timetable(Lecture lecture){
     }
 }
 
-Timetable::Timetable(Class turma){
+Timetable::Timetable(Class_Hour turma){
     for(unsigned long int i = 0; i < turma.lectures.size(); i++){
         this->add(Timetable(*turma.lectures[i]));
     }
