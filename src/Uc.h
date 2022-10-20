@@ -13,7 +13,7 @@
 class UC{
     public:
         UC(int code);
-        std::vector<Class_Hour*> classes;
+        std::vector<Class_Hour> classes;
         int code;
         std::string toString();
 };

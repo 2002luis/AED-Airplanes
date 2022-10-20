@@ -9,7 +9,7 @@
 #include "Uc.h"
 #include "overloads.h"
 #include <iostream>
-
+#include <vector>
 
 
 
@@ -20,6 +20,9 @@
 
 
 int main(){
-    Lecture teste1("Teste","Monday",8,2,"Gay");
-    std::cout << Timetable(teste1) << std::endl;
+    Lecture teste1("Teste","Monday",8,2,"Gay"), teste2("Teste", "Thursday",14.5,1,"Gay");
+    Class_Hour testClass("Gay");
+    testClass.lectures.push_back(teste1);
+    testClass.lectures.push_back(teste2);
+    std::cout << Timetable(testClass) << std::endl;
 }

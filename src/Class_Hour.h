@@ -11,7 +11,7 @@
 
 class Class_Hour {
 public:
-    std::vector<Lecture*> lectures;
+    std::vector<Lecture> lectures;
     std::string name;
     Class_Hour(std::string name);
 };
