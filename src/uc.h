@@ -7,7 +7,7 @@
 
 #include <string.h>
 #include <vector>
-#include <class.h>
+#include <lecture.h>
 
 class UC{
     public UC(int code);

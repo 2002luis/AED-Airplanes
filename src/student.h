@@ -5,12 +5,16 @@
 #ifndef PROJC_STUDENT_H
 #define PROJC_STUDENT_H
 
-#include <string.h>
+#include <string>
 #include <vector>
+#include <lecture.h>
 
 class Student{
-    public string name;
-    public unsigned long int num;
-    public vector<Class> classes;
+    public:
+        std::string name;
+        unsigned long int num;
+        std::vector<Lecture> classes;
+        Student(std::string name, unsigned long int num);
+    
 };
 #endif PROJC_STUDENT_H
