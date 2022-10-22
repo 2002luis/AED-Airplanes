@@ -2,7 +2,10 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "schedule"
+			"path" : "schedule.exe"
+		},
+		{
+			"path" : "schedule.pdb"
 		}
 	],
 	"backtrace" : 1,
@@ -11,8 +14,7 @@
 		"commands" : 
 		[
 			"add_executable",
-			"include_directories",
-			"target_compile_features"
+			"include_directories"
 		],
 		"files" : 
 		[
@@ -34,12 +36,6 @@
 				"file" : 0,
 				"line" : 4,
 				"parent" : 0
-			},
-			{
-				"command" : 2,
-				"file" : 0,
-				"line" : 14,
-				"parent" : 0
 			}
 		]
 	},
@@ -50,27 +46,16 @@
 			[
 				{
 					"fragment" : "-g   -g"
-				},
-				{
-					"fragment" : "-std=gnu++17"
 				}
 			],
 			"includes" : 
 			[
 				{
 					"backtrace" : 2,
-					"path" : "/home/feld/Documents/Projetos/AED/src"
+					"path" : "C:/Users/luism/OneDrive/Ambiente de Trabalho/Projeto/AED/src"
 				}
 			],
 			"language" : "CXX",
-			"languageStandard" : 
-			{
-				"backtraces" : 
-				[
-					3
-				],
-				"standard" : "17"
-			},
 			"sourceIndexes" : 
 			[
 				0,
@@ -94,12 +79,16 @@
 			{
 				"fragment" : "",
 				"role" : "flags"
+			},
+			{
+				"fragment" : "-lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32",
+				"role" : "libraries"
 			}
 		],
 		"language" : "CXX"
 	},
 	"name" : "schedule",
-	"nameOnDisk" : "schedule",
+	"nameOnDisk" : "schedule.exe",
 	"paths" : 
 	{
 		"build" : ".",
