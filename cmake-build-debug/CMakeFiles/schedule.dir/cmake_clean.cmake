@@ -3,6 +3,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/schedule.dir/src/Class_Hour.cpp.obj.d"
   "CMakeFiles/schedule.dir/src/Lecture.cpp.obj"
   "CMakeFiles/schedule.dir/src/Lecture.cpp.obj.d"
+  "CMakeFiles/schedule.dir/src/Student.cpp.obj"
+  "CMakeFiles/schedule.dir/src/Student.cpp.obj.d"
   "CMakeFiles/schedule.dir/src/Timetable.cpp.obj"
   "CMakeFiles/schedule.dir/src/Timetable.cpp.obj.d"
   "CMakeFiles/schedule.dir/src/Uc.cpp.obj"

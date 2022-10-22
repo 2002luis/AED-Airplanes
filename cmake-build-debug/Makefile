@@ -176,6 +176,30 @@ src/Lecture.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\schedule.dir\build.make CMakeFiles/schedule.dir/src/Lecture.cpp.s
 .PHONY : src/Lecture.cpp.s
 
+src/Student.obj: src/Student.cpp.obj
+.PHONY : src/Student.obj
+
+# target to build an object file
+src/Student.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\schedule.dir\build.make CMakeFiles/schedule.dir/src/Student.cpp.obj
+.PHONY : src/Student.cpp.obj
+
+src/Student.i: src/Student.cpp.i
+.PHONY : src/Student.i
+
+# target to preprocess a source file
+src/Student.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\schedule.dir\build.make CMakeFiles/schedule.dir/src/Student.cpp.i
+.PHONY : src/Student.cpp.i
+
+src/Student.s: src/Student.cpp.s
+.PHONY : src/Student.s
+
+# target to generate assembly for a file
+src/Student.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\schedule.dir\build.make CMakeFiles/schedule.dir/src/Student.cpp.s
+.PHONY : src/Student.cpp.s
+
 src/Timetable.obj: src/Timetable.cpp.obj
 .PHONY : src/Timetable.obj
 
@@ -287,6 +311,9 @@ help:
 	@echo ... src/Lecture.obj
 	@echo ... src/Lecture.i
 	@echo ... src/Lecture.s
+	@echo ... src/Student.obj
+	@echo ... src/Student.i
+	@echo ... src/Student.s
 	@echo ... src/Timetable.obj
 	@echo ... src/Timetable.i
 	@echo ... src/Timetable.s
