@@ -13,9 +13,13 @@ Timetable::Timetable(Lecture lecture){
 
     for(int i = 0; i < 5; i++) this->horario.push_back(temp);
 
-    for(float i = lecture.duration - 0.5; i >= 0; i-=0.5){
-        this->horario[lecture.day][(lecture.startTime+i)*2-16] = lecture.toString();
-    }
+    this->horario[lecture.day][(lecture.startTime+(lecture.duration))*2-16] = "--------";
+
+    //float halfDur = lecture.duration/2;
+
+    this->horario[lecture.day][(lecture.startTime+(lecture.duration/2))*2-16] = lecture.toString();
+
+    this->horario[lecture.day][(lecture.startTime)*2-16] = "--------";
 }
 
 Timetable::Timetable(Class_Hour turma){

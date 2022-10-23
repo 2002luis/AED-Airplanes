@@ -42,24 +42,26 @@ std::ostream& operator<<(std::ostream& os, const Timetable& a)
     horas.push_back("20:00");
     horas.push_back("20:30");
 
-    os << "\t2a feira\t3a feira\t4a feira\t5a feira\t6a feira\t" << std::endl << '\t';
-    for(int i = 0; i < 5; i++){
+    os << "\t2a feira\t3a feira\t4a feira\t5a feira\t6a feira\t" << std::endl;
+    /*for(int i = 0; i < 5; i++){
         if(a.horario[i][0]!="\t") os << "--------";
         else os << '\t';
         os << '\t';
-    }
+    }*/
 
     for(unsigned long int i = 0; i < horas.size(); i++){
-        os << '\t';
-        os << std::endl;
+        //os << '\t';
+        //os << std::endl;
         os << horas[i] << '\t' << a.horario[0][i] << '\t' << a.horario[1][i] << '\t' << a.horario[2][i] << '\t' << a.horario[3][i] << '\t' << a.horario[4][i] << std::endl;
-        os << '\t';
+        //os << '\t';
 
+        /*
         for(int j = 0; j < 5; j++){
             if(a.horario[j][i]!=a.horario[j][i+1]) os << "--------";
             else os << '\t';
             os << '\t';
         }
+         */
     }
 
     return os;
