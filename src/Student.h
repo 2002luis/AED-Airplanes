@@ -7,14 +7,15 @@
 
 #include <string>
 #include <vector>
-#include <lecture.h>
+
+#include "Class_Hour.h"
 
 class Student{
     public:
         std::string name;
         unsigned long int num;
-        std::vector<Lecture> classes;
+        std::vector<Class_Hour*> classes;
         Student(std::string name, unsigned long int num);
     
 };
-#endif PROJC_STUDENT_H
+#endif

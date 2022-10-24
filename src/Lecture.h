@@ -2,12 +2,10 @@
 // Created by luism on 18/10/2022.
 //
 
-#ifndef PROJC_CLASS_H
-#define PROJC_CLASS_H
+#ifndef PROJC_LECTURE_H
+#define PROJC_LECTURE_H
 
 #include <string>
-#include <student.h>
-
 
 class Lecture{
     public:
@@ -19,4 +17,4 @@ class Lecture{
         std::string toString();
 };
 
-#endif PROJC_CLASS_H
+#endif
