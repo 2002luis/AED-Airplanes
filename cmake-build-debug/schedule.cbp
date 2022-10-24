@@ -90,6 +90,12 @@
 		<Unit filename="C:/Users/up202005832/Desktop/AED/src/Class_Hour.h">
 			<Option target="schedule"/>
 		</Unit>
+		<Unit filename="C:/Users/up202005832/Desktop/AED/src/Filereader.cpp">
+			<Option target="schedule"/>
+		</Unit>
+		<Unit filename="C:/Users/up202005832/Desktop/AED/src/Filereader.h">
+			<Option target="schedule"/>
+		</Unit>
 		<Unit filename="C:/Users/up202005832/Desktop/AED/src/Lecture.cpp">
 			<Option target="schedule"/>
 		</Unit>

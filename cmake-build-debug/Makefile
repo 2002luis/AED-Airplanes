@@ -152,6 +152,30 @@ src/Class_Hour.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\schedule.dir\build.make CMakeFiles/schedule.dir/src/Class_Hour.cpp.s
 .PHONY : src/Class_Hour.cpp.s
 
+src/Filereader.obj: src/Filereader.cpp.obj
+.PHONY : src/Filereader.obj
+
+# target to build an object file
+src/Filereader.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\schedule.dir\build.make CMakeFiles/schedule.dir/src/Filereader.cpp.obj
+.PHONY : src/Filereader.cpp.obj
+
+src/Filereader.i: src/Filereader.cpp.i
+.PHONY : src/Filereader.i
+
+# target to preprocess a source file
+src/Filereader.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\schedule.dir\build.make CMakeFiles/schedule.dir/src/Filereader.cpp.i
+.PHONY : src/Filereader.cpp.i
+
+src/Filereader.s: src/Filereader.cpp.s
+.PHONY : src/Filereader.s
+
+# target to generate assembly for a file
+src/Filereader.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\schedule.dir\build.make CMakeFiles/schedule.dir/src/Filereader.cpp.s
+.PHONY : src/Filereader.cpp.s
+
 src/Lecture.obj: src/Lecture.cpp.obj
 .PHONY : src/Lecture.obj
 
@@ -308,6 +332,9 @@ help:
 	@echo ... src/Class_Hour.obj
 	@echo ... src/Class_Hour.i
 	@echo ... src/Class_Hour.s
+	@echo ... src/Filereader.obj
+	@echo ... src/Filereader.i
+	@echo ... src/Filereader.s
 	@echo ... src/Lecture.obj
 	@echo ... src/Lecture.i
 	@echo ... src/Lecture.s

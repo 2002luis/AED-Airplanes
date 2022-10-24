@@ -9,6 +9,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "C:/Users/up202005832/Desktop/AED/src/Class_Hour.cpp" "CMakeFiles/schedule.dir/src/Class_Hour.cpp.obj" "gcc" "CMakeFiles/schedule.dir/src/Class_Hour.cpp.obj.d"
+  "C:/Users/up202005832/Desktop/AED/src/Filereader.cpp" "CMakeFiles/schedule.dir/src/Filereader.cpp.obj" "gcc" "CMakeFiles/schedule.dir/src/Filereader.cpp.obj.d"
   "C:/Users/up202005832/Desktop/AED/src/Lecture.cpp" "CMakeFiles/schedule.dir/src/Lecture.cpp.obj" "gcc" "CMakeFiles/schedule.dir/src/Lecture.cpp.obj.d"
   "C:/Users/up202005832/Desktop/AED/src/Student.cpp" "CMakeFiles/schedule.dir/src/Student.cpp.obj" "gcc" "CMakeFiles/schedule.dir/src/Student.cpp.obj.d"
   "C:/Users/up202005832/Desktop/AED/src/Timetable.cpp" "CMakeFiles/schedule.dir/src/Timetable.cpp.obj" "gcc" "CMakeFiles/schedule.dir/src/Timetable.cpp.obj.d"
