@@ -3,20 +3,11 @@ project(schedule)
 include_directories(src)
 
 set(SOURCE
-src/main.cpp
-src/Read.cpp
-src/Read.h
-src/Write.cpp
-src/Write.h
-src/Uc.cpp
-src/Uc.h
-src/Class.cpp
-src/Class.h
-src/Sort.cpp
-src/Sort.h
-src/Student.cpp
-src/Student.h
-        src/uc.h)
+lecture.cpp
+lecture.h
+student.h
+uc.cpp
+uc.h)
 
 add_executable(${PROJECT_NAME} ${SOURCE})
 
