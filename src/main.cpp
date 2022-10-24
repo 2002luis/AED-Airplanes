@@ -10,7 +10,7 @@
 #include "overloads.h"
 #include <iostream>
 #include <vector>
-
+#include <set>
 
 
 
@@ -20,6 +20,11 @@
 
 
 int main(){
+    std::set<UC> ucs = Filereader.readUcs();
+
+
+
+
     Lecture teste1("Teste","Monday",8,2,"Gay"), teste2("FSI", "Monday",10,1,"T");
     Lecture teste3("Canada","Tuesday",9,1,"P");
     Class_Hour testClass("Gay"), testClass2("Gay2");

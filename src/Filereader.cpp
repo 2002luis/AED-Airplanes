@@ -3,7 +3,9 @@
 #include <iostream>
 #include <vector>
 #include <map>      // podemos usar sets
-
+#include <set>
+#include <fstream>
+/*
 Filereader:: Filereader(){
 
     ifstream students_classesfile("../students_classes.csv"), classes_per_ucfile("../classes_per_uc.cvs"),classesfile("../classes.csv");
@@ -71,3 +73,14 @@ Filereader:: Filereader(){
 
     }
 };
+ */
+
+static set<UC> Filereader::readUcs() {
+    set<UC> out;
+    std::string line;
+    std::ifstream ifs("../classes_per_uc.csv");
+    while(std::getline(ifs,line,',')){
+
+    }
+
+}
