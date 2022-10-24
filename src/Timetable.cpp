@@ -48,7 +48,7 @@ bool Timetable::add(Timetable a){
     std::vector<std::string> out;
     for(int i = 0; i < 5; i++){
         for(int j = 0; j < 30; j++){
-            if(a.horario[i][j]!="\t" && this->horario[i][j]!="\t") return(false);
+            if(a.horario[i][j]!="\t" && this->horario[i][j]!="\t" && this->horario[i][j]!=a.horario[i][j]) return(false);
         }
     }
     for(int i = 0; i < 5; i++){

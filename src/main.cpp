@@ -20,8 +20,8 @@
 
 
 int main(){
-    Lecture teste1("Teste","Monday",8,2,"Gay"), teste2("Teste", "Thursday",14.5,1,"Gay");
-    Lecture teste3("Canada","Tuesday",9,1.5,"P");
+    Lecture teste1("Teste","Monday",8,2,"Gay"), teste2("FSI", "Monday",10,1,"T");
+    Lecture teste3("Canada","Tuesday",9,1,"P");
     Class_Hour testClass("Gay"), testClass2("Gay2");
     Student testStudent("Canadiano",202012345);
     testClass.lectures.push_back(teste1);
