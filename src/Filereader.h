@@ -24,10 +24,8 @@ class Filereader {
 
 public:
     Filereader();
-
-    static set<UC> readUcs(){
-
-    }
+    static std::string removeComma(std::string in);
+    static map<std::string,UC> readUcs();
 
 
 

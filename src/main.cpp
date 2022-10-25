@@ -8,10 +8,11 @@
 #include "Timetable.h"
 #include "Uc.h"
 #include "overloads.h"
+#include "Filereader.h"
 #include <iostream>
 #include <vector>
 #include <set>
-
+#include <map>
 
 
 
@@ -20,7 +21,7 @@
 
 
 int main(){
-    std::set<UC> ucs = Filereader.readUcs();
+    std::map<std::string,UC> ucs = Filereader::readUcs();
 
 
 
