@@ -13,13 +13,13 @@ Timetable::Timetable(Lecture lecture){
 
     for(int i = 0; i < 5; i++) this->horario.push_back(temp);
 
-    this->horario[lecture.day][(lecture.startTime+(lecture.duration))*2-16] = "----------";
+    this->horario[lecture.day][(lecture.startTime+(lecture.duration))*2-16] = "--------";
 
     //float halfDur = lecture.duration/2;
 
     this->horario[lecture.day][(lecture.startTime+(lecture.duration/2))*2-16] = lecture.toString();
 
-    this->horario[lecture.day][(lecture.startTime)*2-16] = "----------";
+    this->horario[lecture.day][(lecture.startTime)*2-16] = "--------";
 }
 
 Timetable::Timetable(Class_Hour turma){
@@ -39,8 +39,11 @@ Timetable::Timetable(Student student){
 
     for(int i = 0; i < 5; i++) this->horario.push_back(temp);
 
-    for(unsigned long int i = 0; i < student.classes.size(); i++){
-        this->add(Timetable(*student.classes[i]));
+    for(auto it = student.classes.begin(); it != student.classes.end(); it++){
+        auto studentClass = *it;
+        UC* uc = studentClass.first;
+        std::string classCode = studentClass.second;
+        this->add(Timetable(*(uc->classes.find(classCode)->second)));
     }
 }
 
@@ -58,4 +61,5 @@ bool Timetable::add(Timetable a){
     }
     return(true);
 }
+
 

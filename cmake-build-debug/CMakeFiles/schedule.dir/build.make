@@ -188,6 +188,36 @@ CMakeFiles/schedule.dir/src/Student.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/schedule.dir/src/Student.cpp.s"
 	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\luism\OneDrive\Ambiente de Trabalho\Projeto\AED\src\Student.cpp" -o CMakeFiles\schedule.dir\src\Student.cpp.s
 
+CMakeFiles/schedule.dir/src/class_change.cpp.obj: CMakeFiles/schedule.dir/flags.make
+CMakeFiles/schedule.dir/src/class_change.cpp.obj: CMakeFiles/schedule.dir/includes_CXX.rsp
+CMakeFiles/schedule.dir/src/class_change.cpp.obj: ../src/class_change.cpp
+CMakeFiles/schedule.dir/src/class_change.cpp.obj: CMakeFiles/schedule.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\luism\OneDrive\Ambiente de Trabalho\Projeto\AED\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/schedule.dir/src/class_change.cpp.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/schedule.dir/src/class_change.cpp.obj -MF CMakeFiles\schedule.dir\src\class_change.cpp.obj.d -o CMakeFiles\schedule.dir\src\class_change.cpp.obj -c "C:\Users\luism\OneDrive\Ambiente de Trabalho\Projeto\AED\src\class_change.cpp"
+
+CMakeFiles/schedule.dir/src/class_change.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/schedule.dir/src/class_change.cpp.i"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\luism\OneDrive\Ambiente de Trabalho\Projeto\AED\src\class_change.cpp" > CMakeFiles\schedule.dir\src\class_change.cpp.i
+
+CMakeFiles/schedule.dir/src/class_change.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/schedule.dir/src/class_change.cpp.s"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\luism\OneDrive\Ambiente de Trabalho\Projeto\AED\src\class_change.cpp" -o CMakeFiles\schedule.dir\src\class_change.cpp.s
+
+CMakeFiles/schedule.dir/src/Program_data.cpp.obj: CMakeFiles/schedule.dir/flags.make
+CMakeFiles/schedule.dir/src/Program_data.cpp.obj: CMakeFiles/schedule.dir/includes_CXX.rsp
+CMakeFiles/schedule.dir/src/Program_data.cpp.obj: ../src/Program_data.cpp
+CMakeFiles/schedule.dir/src/Program_data.cpp.obj: CMakeFiles/schedule.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\luism\OneDrive\Ambiente de Trabalho\Projeto\AED\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/schedule.dir/src/Program_data.cpp.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/schedule.dir/src/Program_data.cpp.obj -MF CMakeFiles\schedule.dir\src\Program_data.cpp.obj.d -o CMakeFiles\schedule.dir\src\Program_data.cpp.obj -c "C:\Users\luism\OneDrive\Ambiente de Trabalho\Projeto\AED\src\Program_data.cpp"
+
+CMakeFiles/schedule.dir/src/Program_data.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/schedule.dir/src/Program_data.cpp.i"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\luism\OneDrive\Ambiente de Trabalho\Projeto\AED\src\Program_data.cpp" > CMakeFiles\schedule.dir\src\Program_data.cpp.i
+
+CMakeFiles/schedule.dir/src/Program_data.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/schedule.dir/src/Program_data.cpp.s"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\luism\OneDrive\Ambiente de Trabalho\Projeto\AED\src\Program_data.cpp" -o CMakeFiles\schedule.dir\src\Program_data.cpp.s
+
 # Object files for target schedule
 schedule_OBJECTS = \
 "CMakeFiles/schedule.dir/src/Filereader.cpp.obj" \
@@ -197,7 +227,9 @@ schedule_OBJECTS = \
 "CMakeFiles/schedule.dir/src/overloads.cpp.obj" \
 "CMakeFiles/schedule.dir/src/Timetable.cpp.obj" \
 "CMakeFiles/schedule.dir/src/Uc.cpp.obj" \
-"CMakeFiles/schedule.dir/src/Student.cpp.obj"
+"CMakeFiles/schedule.dir/src/Student.cpp.obj" \
+"CMakeFiles/schedule.dir/src/class_change.cpp.obj" \
+"CMakeFiles/schedule.dir/src/Program_data.cpp.obj"
 
 # External object files for target schedule
 schedule_EXTERNAL_OBJECTS =
@@ -210,11 +242,13 @@ schedule.exe: CMakeFiles/schedule.dir/src/overloads.cpp.obj
 schedule.exe: CMakeFiles/schedule.dir/src/Timetable.cpp.obj
 schedule.exe: CMakeFiles/schedule.dir/src/Uc.cpp.obj
 schedule.exe: CMakeFiles/schedule.dir/src/Student.cpp.obj
+schedule.exe: CMakeFiles/schedule.dir/src/class_change.cpp.obj
+schedule.exe: CMakeFiles/schedule.dir/src/Program_data.cpp.obj
 schedule.exe: CMakeFiles/schedule.dir/build.make
 schedule.exe: CMakeFiles/schedule.dir/linklibs.rsp
 schedule.exe: CMakeFiles/schedule.dir/objects1.rsp
 schedule.exe: CMakeFiles/schedule.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="C:\Users\luism\OneDrive\Ambiente de Trabalho\Projeto\AED\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable schedule.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="C:\Users\luism\OneDrive\Ambiente de Trabalho\Projeto\AED\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX executable schedule.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\schedule.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

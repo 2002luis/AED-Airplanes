@@ -104,6 +104,12 @@
 		<Unit filename="C:/Users/luism/OneDrive/Ambiente de Trabalho/Projeto/AED/src/Lecture.h">
 			<Option target="schedule"/>
 		</Unit>
+		<Unit filename="C:/Users/luism/OneDrive/Ambiente de Trabalho/Projeto/AED/src/Program_data.cpp">
+			<Option target="schedule"/>
+		</Unit>
+		<Unit filename="C:/Users/luism/OneDrive/Ambiente de Trabalho/Projeto/AED/src/Program_data.h">
+			<Option target="schedule"/>
+		</Unit>
 		<Unit filename="C:/Users/luism/OneDrive/Ambiente de Trabalho/Projeto/AED/src/Student.cpp">
 			<Option target="schedule"/>
 		</Unit>
@@ -120,6 +126,12 @@
 			<Option target="schedule"/>
 		</Unit>
 		<Unit filename="C:/Users/luism/OneDrive/Ambiente de Trabalho/Projeto/AED/src/Uc.h">
+			<Option target="schedule"/>
+		</Unit>
+		<Unit filename="C:/Users/luism/OneDrive/Ambiente de Trabalho/Projeto/AED/src/class_change.cpp">
+			<Option target="schedule"/>
+		</Unit>
+		<Unit filename="C:/Users/luism/OneDrive/Ambiente de Trabalho/Projeto/AED/src/class_change.h">
 			<Option target="schedule"/>
 		</Unit>
 		<Unit filename="C:/Users/luism/OneDrive/Ambiente de Trabalho/Projeto/AED/src/main.cpp">

@@ -11,11 +11,16 @@
 #include "Class_Hour.h"
 #include <map>
 
-class UC{
-    public:
-        UC(std::string code);
-        std::map<std::string,Class_Hour> classes;
-        std::string code;
+class UC{ // passa a ter um vetor de turmas , class turmas
+public:
+    UC(std::string code);
+    std::string name;
+    std::map<std::string,Class_Hour*> classes;
+    bool operator<(UC);
+    void difference();
+    unsigned char max;
+    unsigned char min;
+
 };
 
 

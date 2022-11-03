@@ -200,6 +200,30 @@ src/Lecture.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\schedule.dir\build.make CMakeFiles/schedule.dir/src/Lecture.cpp.s
 .PHONY : src/Lecture.cpp.s
 
+src/Program_data.obj: src/Program_data.cpp.obj
+.PHONY : src/Program_data.obj
+
+# target to build an object file
+src/Program_data.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\schedule.dir\build.make CMakeFiles/schedule.dir/src/Program_data.cpp.obj
+.PHONY : src/Program_data.cpp.obj
+
+src/Program_data.i: src/Program_data.cpp.i
+.PHONY : src/Program_data.i
+
+# target to preprocess a source file
+src/Program_data.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\schedule.dir\build.make CMakeFiles/schedule.dir/src/Program_data.cpp.i
+.PHONY : src/Program_data.cpp.i
+
+src/Program_data.s: src/Program_data.cpp.s
+.PHONY : src/Program_data.s
+
+# target to generate assembly for a file
+src/Program_data.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\schedule.dir\build.make CMakeFiles/schedule.dir/src/Program_data.cpp.s
+.PHONY : src/Program_data.cpp.s
+
 src/Student.obj: src/Student.cpp.obj
 .PHONY : src/Student.obj
 
@@ -272,6 +296,30 @@ src/Uc.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\schedule.dir\build.make CMakeFiles/schedule.dir/src/Uc.cpp.s
 .PHONY : src/Uc.cpp.s
 
+src/class_change.obj: src/class_change.cpp.obj
+.PHONY : src/class_change.obj
+
+# target to build an object file
+src/class_change.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\schedule.dir\build.make CMakeFiles/schedule.dir/src/class_change.cpp.obj
+.PHONY : src/class_change.cpp.obj
+
+src/class_change.i: src/class_change.cpp.i
+.PHONY : src/class_change.i
+
+# target to preprocess a source file
+src/class_change.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\schedule.dir\build.make CMakeFiles/schedule.dir/src/class_change.cpp.i
+.PHONY : src/class_change.cpp.i
+
+src/class_change.s: src/class_change.cpp.s
+.PHONY : src/class_change.s
+
+# target to generate assembly for a file
+src/class_change.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\schedule.dir\build.make CMakeFiles/schedule.dir/src/class_change.cpp.s
+.PHONY : src/class_change.cpp.s
+
 src/main.obj: src/main.cpp.obj
 .PHONY : src/main.obj
 
@@ -338,6 +386,9 @@ help:
 	@echo ... src/Lecture.obj
 	@echo ... src/Lecture.i
 	@echo ... src/Lecture.s
+	@echo ... src/Program_data.obj
+	@echo ... src/Program_data.i
+	@echo ... src/Program_data.s
 	@echo ... src/Student.obj
 	@echo ... src/Student.i
 	@echo ... src/Student.s
@@ -347,6 +398,9 @@ help:
 	@echo ... src/Uc.obj
 	@echo ... src/Uc.i
 	@echo ... src/Uc.s
+	@echo ... src/class_change.obj
+	@echo ... src/class_change.i
+	@echo ... src/class_change.s
 	@echo ... src/main.obj
 	@echo ... src/main.i
 	@echo ... src/main.s
