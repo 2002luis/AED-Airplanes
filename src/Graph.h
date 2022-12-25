@@ -34,7 +34,9 @@ public:
     Graph();
     int addAirport(Airport a);
     bool addFlight(std::string source, std::string dest, std::string company);
-
+    std::unordered_map<std::string,Node> getNodes(){
+        return this->nodes;
+    }
 };
 
 
