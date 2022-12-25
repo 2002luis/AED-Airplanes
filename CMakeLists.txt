@@ -3,4 +3,4 @@ project(AED_Airplane)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(AED_Airplane src/main.cpp src/Airport.h src/Airport.cpp)
+add_executable(AED_Airplane src/main.cpp src/Airport.h src/Airport.cpp src/Data.h src/Data.cpp src/Airlines.cpp src/Airlines.h)
