@@ -1,0 +1,21 @@
+//
+// Created by luism on 25/12/2022.
+//
+
+#ifndef AED_AIRPLANE_AIRPORT_H
+#define AED_AIRPLANE_AIRPORT_H
+
+#include <iostream>
+#include <string.h>
+
+class Airport {
+private:
+    std::string code, name, city, country;
+    double latitude, longitude;
+public:
+    Airport(std::string code, std::string name, std::string city, std::string country, double latitude, double longitude);
+
+};
+
+
+#endif //AED_AIRPLANE_AIRPORT_H
