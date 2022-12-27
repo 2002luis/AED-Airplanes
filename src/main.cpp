@@ -33,12 +33,7 @@ int main() {
 
     std::cout << testG;
 
-    //std::cout << testG.bfs("BRUH","BRUH5");
-    std::list<std::string> path = testG.bfs("BRUH","BRUH5");
-    std::cout << std::endl;
-    for(auto i : path){
-        std::cout << i << ' ';
-    }
+    std::cout << testG.bfs("BRUH","BRUH5");
 
 
 

@@ -13,7 +13,14 @@
 std::ostream& operator<<(std::ostream& os, Airport a);
 std::ostream& operator<<(std::ostream& os, Airlines a);
 std::ostream& operator<<(std::ostream& os, Graph a);
+
 template<class T>
-std::ostream& operator<<(std::ostream& os, std::list<T> a);
+std::ostream& operator<<(std::ostream& os, std::list<T> a){
+    os << std::endl;
+    for(auto i: a){
+        os << i << ' ';
+    }
+    return os;
+}
 
 #endif //AED_AIRPLANE_OVERLOADS_H
