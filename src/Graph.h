@@ -37,6 +37,7 @@ public:
     std::unordered_map<std::string,Node> getNodes(){
         return this->nodes;
     }
+    std::list<std::string> bfs(std::string in, std::string out);
 };
 
 

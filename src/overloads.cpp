@@ -35,4 +35,13 @@ std::ostream& operator<<(std::ostream& os, Graph a){
     return os;
 }
 
+template <class T>
+std::ostream& operator<<(std::ostream& os, std::list<T> a){
+    os << std::endl;
+    for(auto i: a){
+        os << a << ' ';
+    }
+    return os;
+}
+
 #endif
