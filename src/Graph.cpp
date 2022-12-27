@@ -32,14 +32,11 @@ bool Graph::addFlight(std::string source, std::string dest, std::string company)
 std::list<std::string> Graph::bfs(std::string in, std::string out){
     std::list<std::string> ans;
 
+    this->nodes.find(in)->second.visited=true;
     if(in == out){
         ans.push_back(out);
         return ans;
     }
-
-    std::list<std::string> temp;
-
-    this->nodes.find(in)->second.visited=true;
 
     std::queue<std::string> toSearch;
 
@@ -49,9 +46,14 @@ std::list<std::string> Graph::bfs(std::string in, std::string out){
         }
     }
 
+    if(toSearch.empty()){
+        return ans;
+    }
+
+    std::list<std::string> temp;
     while(!toSearch.empty()){
         temp = this->bfs(toSearch.front(),out);
-        if(ans.empty() || ans.size()>temp.size()) ans = temp;
+        if((ans.empty() || ans.size()>temp.size()) && !temp.empty()) ans = temp;
         toSearch.pop();
     }
 

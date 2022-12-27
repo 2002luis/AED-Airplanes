@@ -25,11 +25,11 @@ int main() {
     testG.addFlight("BRUH2","BRUH3","gay");
     testG.addFlight("BRUH3","BRUH5","gay");
 
-    testG.addFlight("BRUH4","BRUH7","gay");
+    //testG.addFlight("BRUH4","BRUH7","gay");
 
     testG.addFlight("BRUH5","BRUH7","gay");
 
-    testG.addFlight("BRUH6","BRUH5","gay");
+    //testG.addFlight("BRUH6","BRUH5","gay");
 
     std::cout << testG;
 
