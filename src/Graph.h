@@ -17,7 +17,7 @@ private:
     struct Edge {
         std::string dest;   // Destination node
         std::string company;
-        int weight; // An integer weight
+        double weight; // An integer weight
     };
 
     struct Node {
@@ -34,11 +34,28 @@ public:
     Graph();
     int addAirport(Airport a);
     bool addFlight(std::string source, std::string dest, std::string company);
+    bool addFlight(std::string source, std::string dest, std::string company, double weight);
+    void removeVisited();
     std::unordered_map<std::string,Node> getNodes(){
         return this->nodes;
     }
     std::list<std::string> bfs(std::string in, std::string out);
+    std::pair<std::list<std::string>,double> djikstra(std::string in, std::string out);
 };
 
+
+
+class mycomparison
+{
+    bool reverse;
+public:
+    mycomparison(const bool& revparam=false)
+    {reverse=revparam;}
+    bool operator() (std::pair<std::string,double> p1, std::pair<std::string,double> p2) const
+    {
+        if (reverse) return (p1.second>p2.second);
+        else return (p1.second<p2.second);
+    }
+};
 
 #endif //AED_AIRPLANE_GRAPH_H
