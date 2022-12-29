@@ -19,26 +19,33 @@ int main() {
     testG.addAirport(a6);
     testG.addAirport(a7);
 
-    testG.addFlight("BRUH","BRUH2","gay",4);
-    testG.addFlight("BRUH","BRUH5","gay",10000);
+    testG.addFlight("BRUH","BRUH2","gay",5);
+    testG.addFlight("BRUH","BRUH7","gay",10000);
+    //testG.addFlight("BRUH","BRUH5","gay",50000);
 
-    testG.addFlight("BRUH2","BRUH3","gay",5);
+    testG.addFlight("BRUH2","BRUH7","gay",1);
 
-    testG.addFlight("BRUH3","BRUH5","gay",2);
+    testG.addFlight("BRUH3","BRUH7","gay",1);
+    testG.addFlight("BRUH3","BRUH2","gay",1);
 
-    //testG.addFlight("BRUH4","BRUH7","gay");
+    testG.addFlight("BRUH4","BRUH3","gay",1);
 
-    testG.addFlight("BRUH5","BRUH7","gay",3);
+    testG.addFlight("BRUH5","BRUH7","gay",1);
 
-    //testG.addFlight("BRUH6","BRUH5","gay");
+    testG.addFlight("BRUH6","BRUH7","gay",1);
+    testG.addFlight("BRUH6","BRUH","gay",1);
+
+    testG.addFlight("BRUH7","BRUH","gay",1);
+
+
 
     std::cout << testG;
 
-    std::cout << testG.bfs("BRUH","BRUH5");
+    std::cout << testG.bfs("BRUH","BRUH7");
 
     testG.removeVisited();
 
-    std::cout << testG.djikstra("BRUH","BRUH5").first;
+    std::cout << testG.djikstra("BRUH","BRUH7").first;
 
 
 

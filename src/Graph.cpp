@@ -40,6 +40,9 @@ void Graph::removeVisited() {
 }
 
 std::list<std::string> Graph::bfs(std::string in, std::string out){
+
+    this->removeVisited();
+
     std::list<std::string> ans;
 
     this->nodes.find(in)->second.visited=true;
@@ -48,8 +51,32 @@ std::list<std::string> Graph::bfs(std::string in, std::string out){
         return ans;
     }
 
-    std::queue<std::string> toSearch;
+    std::queue<std::list<std::string>> toSearch;
+    for(auto i : this->nodes.find(in)->second.adj){
+        toSearch.push({in,i.dest});
+        if (i.dest == out) return toSearch.back();
 
+    }
+
+    while(!toSearch.empty()){
+        std::string cur = toSearch.front().back();
+        this->nodes.find(cur)->second.visited = true;
+        for(auto i : this->nodes.find(cur)->second.adj) {
+            if (!this->nodes.find(i.dest)->second.visited) {
+                std::list<std::string> temp = toSearch.front();
+                temp.push_back(i.dest);
+                if (i.dest == out) return temp;
+
+                toSearch.push(temp);
+            }
+        }
+        toSearch.pop();
+    }
+
+
+    std::list<std::string> empty;
+    return empty;
+/*
     for(auto i : this->nodes.find(in)->second.adj){
         if(!this->nodes.find(i.dest)->second.visited){
             toSearch.push(i.dest);
@@ -70,16 +97,52 @@ std::list<std::string> Graph::bfs(std::string in, std::string out){
     ans.push_front(in);
 
     return ans;
+    */
 }
 
-bool sortBy2nd(std::pair<std::string,double> p1, std::pair<std::string,double> p2){
+bool sortBy2nd(std::pair<std::list<std::string>,double> p1, std::pair<std::list<std::string>,double> p2){
     return(p1.second>p2.second);
 }
 
 std::pair<std::list<std::string>,double> Graph::djikstra(std::string in, std::string out){
 
+    this->removeVisited();
     std::pair<std::list<std::string>,double> ans = {{},0};
 
+    this->nodes.find(in)->second.visited=true;
+    if(in == out){
+        ans.first.push_back(out);
+        return ans;
+    }
+
+    std::priority_queue<std::pair<std::list<std::string>,double>, std::vector<std::pair<std::list<std::string>,double>>,mycomparison> toSearch;
+    for(auto i : this->nodes.find(in)->second.adj){
+        std::list<std::string> lst;
+        std::pair<std::list<std::string>,double> tmp({in,i.dest},i.weight);
+        toSearch.push(tmp);
+    }
+
+    while(!toSearch.empty()){
+        std::string cur = toSearch.top().first.back();
+        this->nodes.find(cur)->second.visited=true;
+        if(cur == out) return toSearch.top();
+
+        for(auto i : this->nodes.find(cur)->second.adj) {
+            if (!this->nodes.find(i.dest)->second.visited) {
+                this->nodes.find(i.dest)->second.visited = true;
+                std::list<std::string> temp = toSearch.top().first;
+                temp.push_back(i.dest);
+                if (i.dest == out) return {temp,toSearch.top().second+i.weight};
+                toSearch.push({temp,toSearch.top().second+i.weight});
+            }
+        }
+        toSearch.pop();
+    }
+
+
+    std::list<std::string> empty;
+    return {empty,0};
+    /*
     this->nodes.find(in)->second.visited=true;
     if(in == out){
         ans.first.push_back(out);
@@ -115,5 +178,5 @@ std::pair<std::list<std::string>,double> Graph::djikstra(std::string in, std::st
     ans.first.push_front(in);
 
     return ans;
-
+    */
 }

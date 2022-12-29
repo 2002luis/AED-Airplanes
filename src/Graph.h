@@ -51,9 +51,9 @@ class mycomparison
 public:
     mycomparison(const bool& revparam=false)
     {reverse=revparam;}
-    bool operator() (std::pair<std::string,double> p1, std::pair<std::string,double> p2) const
+    bool operator() (std::pair<std::list<std::string>,double> p1, std::pair<std::list<std::string>,double> p2) const
     {
-        if (reverse) return (p1.second>p2.second);
+        if (!reverse) return (p1.second>p2.second);
         else return (p1.second<p2.second);
     }
 };
