@@ -1,0 +1,3 @@
+C:/Users/tomas/Downloads/AED-Airplanes-master (1)/AED-Airplanes-master/cmake-build-debug/CMakeFiles/AED_Airplane.dir
+C:/Users/tomas/Downloads/AED-Airplanes-master (1)/AED-Airplanes-master/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/tomas/Downloads/AED-Airplanes-master (1)/AED-Airplanes-master/cmake-build-debug/CMakeFiles/rebuild_cache.dir

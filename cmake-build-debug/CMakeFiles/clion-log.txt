@@ -1,0 +1,4 @@
+"C:\Program Files\JetBrains\CLion 2022.2.3\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" -S "C:\Users\tomas\Downloads\AED-Airplanes-master (1)\AED-Airplanes-master" -B "C:\Users\tomas\Downloads\AED-Airplanes-master (1)\AED-Airplanes-master\cmake-build-debug"
+-- Configuring done
+-- Generating done
+-- Build files have been written to: C:/Users/tomas/Downloads/AED-Airplanes-master (1)/AED-Airplanes-master/cmake-build-debug
