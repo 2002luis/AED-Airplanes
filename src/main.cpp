@@ -1,90 +1,95 @@
-//
-// Created by feld on 20-10-2022.
-//
-
-#include "class_change.h"
-#include "Lecture.h"
-#include "Class_Hour.h"
-#include "Student.h"
-#include "Timetable.h"
-#include "Uc.h"
-#include "overloads.h"
-#include "Filereader.h"
-#include "Program_data.h"
 #include <iostream>
-#include <vector>
-#include <set>
-#include <map>
+#include <string.h>
+#include "Graph.h"
+#include "GraphC.h"
+#include "Airport.h"
+#include "overloads.h"
+#include "Data.h"
 
 
-
-
-
-
-
-int main(){
+int main() {
 
     /*
-    Program_data sus = Program_data();
-    Filereader::readUcs(sus);
-    Filereader::readClasses(sus);
-    Filereader::readStudents(sus);
+    Graph testG;
+    Airport a1("BRUH","","","",3,3),a2("BRUH2","","","",3,3),a3("BRUH3","","","",3,3),
+            a4("BRUH4","","","",3,3), a5("BRUH5","","","",3,3),
+            a6("BRUH6","","","",3,3),a7("BRUH7","","","",3,3);
+    testG.addAirport(a1);
+    testG.addAirport(a2);
+    testG.addAirport(a3);
+    testG.addAirport(a4);
+    testG.addAirport(a5);
+    testG.addAirport(a6);
+    testG.addAirport(a7);
 
-    cout << endl;
-    cout << Timetable(*sus.getStudent(202071557));
+    testG.addFlight("BRUH","BRUH2","gay",5);
+    testG.addFlight("BRUH","BRUH7","gay",10000);
+    //testG.addFlight("BRUH","BRUH5","gay",50000);
 
-    class_change::remove_Uc(*sus.getStudent(202071557), sus.getUC("L.EIC023"));
+    testG.addFlight("BRUH2","BRUH7","gay",1);
 
-    cout << endl << Timetable(*sus.getStudent(202071557));
+    testG.addFlight("BRUH3","BRUH7","gay",1);
+    testG.addFlight("BRUH3","BRUH2","gay",1);
+
+    testG.addFlight("BRUH4","BRUH3","gay",1);
+
+    testG.addFlight("BRUH5","BRUH7","gay",1);
+
+    testG.addFlight("BRUH6","BRUH7","gay",1);
+    testG.addFlight("BRUH6","BRUH","gay",1);
+
+    testG.addFlight("BRUH7","BRUH","gay",1);
+
+
+
+    std::cout << testG;
+
+    std::cout << testG.bfs("BRUH","BRUH7");
+
+    testG.removeVisited();
+
+    std::cout << testG.djikstra("BRUH","BRUH7").first;
     */
 
-     /*
-    int alunosUcTurma(string turma, string uc, map<unsigned long int, Student> students){
-        int size = 0;
-        std::map<unsigned long int, Student>::iterator it;
-        for(it = students.begin(); it != students.end(); it++){ //students
-            for(size_t i = 0; i < it->second.classes.size(); i++){
-                if(it->second.classes[i]->ucName == uc && it->second.classes[i]->name == turma){
-                    cout << "O aluno -" << it->first << " pertence a turma " << turma << " da uc " << uc << endl;
-                    size += 1;
-                }
-            }
-        }
-        return size;
-    }*/
     /*
-    for(auto i : ucs){
-        if(i.second.code=="L.EIC001"){
-            for (auto j : i.second.classes){
-                if(j.second.name=="1LEIC01") cout << Timetable(j.second);
-            }
-        }
-    }
+    GraphC testC;
+
+    Airport c1("A1","","C1","",0,0),c2("A2","","C1","",0,0),
+            c3("A3","","C2","",0,0),c4("A4","","C3","",0,0),
+            c5("A5","","C4","",0,0);
+
+    testC.addAirport(c1);
+    testC.addAirport(c2);
+    testC.addAirport(c3);
+    testC.addAirport(c4);
+    testC.addAirport(c5);
+
+    testC.addFlight("A2","C1","A3","C2","SEXO");
+    testC.addFlight("A3","C2","A5","C4","SEXO");
+    testC.addFlight("A1","C1","A5","C4","SEXO",300);
+
+    std::cout << testC << std::endl;
+
+    std::cout << testC.bfs("C1","C4") << std::endl;
+    std::cout << testC.citiesToAirports(testC.bfs("C1","C4")) << std::endl;
+
+
+
+    std::cout << testC.djikstra("C1","C4").first << std::endl;
+    std::cout << testC.citiesToAirports(testC.djikstra("C1","C4").first) << std::endl;
     */
 
-    Program_data sus2;
-    Lecture teste1("Teste","Monday",8,2,"Gay","Aula1"), teste2("FSI", "Monday",10,1,"T","Aula1");
-    Lecture teste3("Canada","Tuesday",9,1,"P","Aula2");
-    Lecture teste4("Albania","Tuesday",11,2,"P","Aula3");
-    UC bruh1("Gay"), bruh2("Gay2");
-    Class_Hour testClass("Gay","Aula1"), testClass2("Gay2","UCGay"), testClass3("Gay3","UCGay");
-    Student testStudent("Canadiano",202012345);
-    testClass.lectures.push_back(teste1);
-    testClass.lectures.push_back(teste2);
-    testClass2.lectures.push_back(teste3);
-    testClass3.lectures.push_back(teste4);
-    bruh1.classes.insert(std::pair<std::string,Class_Hour*>("Gay",&testClass));
-    bruh2.classes.insert(std::pair<std::string,Class_Hour*>("Gay2",&testClass2));
-    bruh2.classes.insert(std::pair<std::string,Class_Hour*>("Gay3",&testClass3));
-    sus2.addUC(&bruh1);
-    sus2.addUC(&bruh2);
-    testStudent.classes.insert(std::pair<UC*,std::string>(&bruh1,"Gay"));
-    testStudent.classes.insert(std::pair<UC*,std::string>(&bruh2,"Gay2"));
+    //READER TESTS
 
-    std::cout << Timetable(testStudent) << std::endl;
+    Data data;
+    Graph graph = data.getGraph();
 
-    class_change::can_switch(&testStudent,&bruh2,"Gay3");
 
-    std::cout << Timetable(testStudent) << std::endl;
+    std::cout << graph << std::endl << graph.bfs("CD1","CD6") << graph.djikstra("CD1","CD6").first << graph.djikstra("CD1","CD6").second;
 
+    GraphC graphCity = data.getCityGraph();
+
+    std::cout << graphCity << std::endl << graphCity.bfs("Lourosa","Gotland") << graphCity.citiesToAirports(graphCity.bfs("Lourosa","Gotland")) << graphCity.djikstra("Lourosa","Gotland").first << graphCity.djikstra("Lourosa","Gotland").second << graphCity.citiesToAirports(graphCity.djikstra("Lourosa","Gotland").first);
+
+    return 0;
 }

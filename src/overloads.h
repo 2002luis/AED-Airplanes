@@ -1,10 +1,37 @@
 //
-// Created by feld on 20-10-2022.
+// Created by luism on 25/12/2022.
 //
 
-#ifndef SCHEDULE_OVERLOADS_H
-#define SCHEDULE_OVERLOADS_H
+#ifndef AED_AIRPLANE_OVERLOADS_H
+#define AED_AIRPLANE_OVERLOADS_H
 
-std::ostream& operator<<(std::ostream& os, const Timetable& a);
+#include <iostream>
+#include "Airport.h"
+#include "Airlines.h"
+#include "Graph.h"
+#include "GraphC.h"
 
-#endif //SCHEDULE_OVERLOADS_H
+std::ostream& operator<<(std::ostream& os, Airport a);
+std::ostream& operator<<(std::ostream& os, Airlines a);
+std::ostream& operator<<(std::ostream& os, Graph a);
+std::ostream& operator<<(std::ostream& os, GraphC a);
+
+template<class T>
+std::ostream& operator<<(std::ostream& os, std::list<T> a){
+    os << std::endl;
+    for(auto i: a){
+        os << i << ' ';
+    }
+    return os;
+}
+
+template<class T>
+std::ostream& operator<<(std::ostream& os, std::list<std::pair<T,T>> a){
+    os << std::endl;
+    for(auto i: a){
+        if(i.first!="" && i.second!="") os << i.first << "->" << i.second << " ";
+    }
+    return os;
+}
+
+#endif //AED_AIRPLANE_OVERLOADS_H
