@@ -97,19 +97,19 @@ std::pair<std::list<std::string>,double> Graph::djikstra(std::string in, std::st
     }
 
     while(!toSearch.empty()){
-        std::string cur = toSearch.top().first.back();
-        this->nodes.find(cur)->second.visited=true;
-        if(cur == out) return toSearch.top();
+        auto cur = toSearch.top();
+        this->nodes.find(cur.first.back())->second.visited=true;
+        if(cur.first.back() == out) return cur;
+        toSearch.pop();
 
-        for(auto i : this->nodes.find(cur)->second.adj) {
+        for(auto i : this->nodes.find(cur.first.back())->second.adj) {
             if (!this->nodes.find(i.dest)->second.visited) {
-                std::list<std::string> temp = toSearch.top().first;
+                std::list<std::string> temp = cur.first;
                 temp.push_back(i.dest);
                 //if (i.dest == out) return {temp,toSearch.top().second+i.weight};
-                toSearch.push({temp,toSearch.top().second+i.weight});
+                toSearch.push({temp,cur.second+i.weight});
             }
         }
-        toSearch.pop();
     }
 
 

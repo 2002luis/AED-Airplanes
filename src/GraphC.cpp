@@ -77,28 +77,6 @@ std::list<std::string> GraphC::bfs(std::string in, std::string out){
 
     std::list<std::string> empty;
     return empty;
-/*
-    for(auto i : this->nodes.find(in)->second.adj){
-        if(!this->nodes.find(i.dest)->second.visited){
-            toSearch.push(i.dest);
-        }
-    }
-
-    if(toSearch.empty()){
-        return ans;
-    }
-
-    std::list<std::string> temp;
-    while(!toSearch.empty()){
-        temp = this->bfs(toSearch.front(),out);
-        if((ans.empty() || ans.size()>temp.size()) && !temp.empty()) ans = temp;
-        toSearch.pop();
-    }
-
-    ans.push_front(in);
-
-    return ans;
-    */
 }
 
 std::pair<std::list<std::string>,double> GraphC::djikstra(std::string in, std::string out){
@@ -120,18 +98,18 @@ std::pair<std::list<std::string>,double> GraphC::djikstra(std::string in, std::s
     }
 
     while(!toSearch.empty()){
-        std::string cur = toSearch.top().first.back();
-        this->nodes.find(cur)->second.visited=true;
-        if(cur == out) return toSearch.top();
+        auto cur = toSearch.top();
+        this->nodes.find(cur.first.back())->second.visited=true;
+        if(cur.first.back() == out) return toSearch.top();
+        toSearch.pop();
 
-        for(auto i : this->nodes.find(cur)->second.adj) {
+        for(auto i : this->nodes.find(cur.first.back())->second.adj) {
             if (!this->nodes.find(i.dest)->second.visited) {
-                std::list<std::string> temp = toSearch.top().first;
+                std::list<std::string> temp = cur.first;
                 temp.push_back(i.dest);
-                toSearch.push({temp,toSearch.top().second+i.weight});
+                toSearch.push({temp,cur.second+i.weight});
             }
         }
-        toSearch.pop();
     }
 
 
