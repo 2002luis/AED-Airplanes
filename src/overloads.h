@@ -18,10 +18,10 @@ std::ostream& operator<<(std::ostream& os, GraphC a);
 
 template<class T>
 std::ostream& operator<<(std::ostream& os, std::list<T> a){
-    os << std::endl;
     for(auto i: a){
         os << i << ' ';
     }
+    os << std::endl;
     return os;
 }
 
@@ -30,6 +30,15 @@ std::ostream& operator<<(std::ostream& os, std::list<std::pair<T,T>> a){
     os << std::endl;
     for(auto i: a){
         if(i.first!="" && i.second!="") os << i.first << "->" << i.second << " ";
+    }
+    return os;
+}
+
+template<class T1, class T2>
+std::ostream& operator<<(std::ostream& os, std::unordered_map<T1,T2> a){
+    os << std::endl;
+    for(auto i: a){
+        os << i.first << ": " << i.second << " ";
     }
     return os;
 }

@@ -34,6 +34,14 @@ GraphC Data::getCityGraph() {
     return (this->graphC);
 }
 
+std::list<std::string> Data::getAirportsInCountry(std::string in){
+    return this->countries.find(in)->second;
+}
+
+std::string Data::getCountry(std::string in){
+    return (this->citiesInCountries.find(in)->second);
+}
+
 std::string Data::removeComma(std::string in){
     std::string out = in;
     while(out.find(' ')!=std::string::npos) out[out.find(' ')]='_';
@@ -63,6 +71,14 @@ int Data::readAirports() {
         this->graph.addAirport(a);
         this->graphC.addAirport(a);
         this->cities.insert({a.getCode(),a.getCity()});
+
+        if(this->countries.find(country)==this->countries.end()) this->countries.insert({country,{}});
+        this->countries.find(country)->second.push_back(code);
+
+        if(this->citiesInCountries.find(city)==this->citiesInCountries.end()) this->citiesInCountries.insert({city,country});
+
+        if(this->cityList.find(city)==this->cityList.end()) this->cityList.insert(city);
+
         out++;
     }
     return out;

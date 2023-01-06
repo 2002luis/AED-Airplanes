@@ -5,6 +5,7 @@
 #include "Graph.h"
 #include <iostream>
 #include <queue>
+#include "unordered_set"
 
 Graph::Graph(){
     this->n=0;
@@ -115,4 +116,37 @@ std::pair<std::list<std::string>,double> Graph::djikstra(std::string in, std::st
 
     std::list<std::string> empty;
     return {empty,0};
+}
+
+std::unordered_set<std::string> Graph::airportsBfs(std::string in, int lim){
+    this->removeVisited();
+
+    std::list<std::string> temp;
+
+    this->nodes.find(in)->second.visited=true;
+    temp.push_back(in);
+
+    std::queue<std::list<std::string>> toSearch;
+    for(auto i : this->nodes.find(in)->second.adj){
+        toSearch.push({in,i.dest});
+
+    }
+
+    while(!toSearch.empty() && toSearch.front().size()<lim){
+        std::string cur = toSearch.front().back();
+        this->nodes.find(cur)->second.visited = true;
+
+        for(auto i : this->nodes.find(cur)->second.adj) {
+            if (!this->nodes.find(i.dest)->second.visited) {
+                std::list<std::string> temp = toSearch.front();
+                temp.push_back(i.dest);
+                toSearch.push(temp);
+            }
+        }
+        toSearch.pop();
+    }
+
+
+    std::list<std::string> empty;
+    return empty;
 }
