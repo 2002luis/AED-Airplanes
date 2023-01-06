@@ -91,5 +91,7 @@ int main() {
 
     std::cout << graphCity << std::endl << graphCity.bfs("Lourosa","Gotland") << graphCity.citiesToAirports(graphCity.bfs("Lourosa","Gotland")) << graphCity.djikstra("Lourosa","Gotland").first << graphCity.djikstra("Lourosa","Gotland").second << graphCity.citiesToAirports(graphCity.djikstra("Lourosa","Gotland").first);
 
+    std::cout << std::endl << std::endl << graph.airportsBfs("CD1",2) << std::endl << graph.airportsDijkstra("CD1",6000);
+
     return 0;
 }

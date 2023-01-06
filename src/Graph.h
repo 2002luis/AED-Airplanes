@@ -42,7 +42,8 @@ public:
     }
     std::list<std::string> bfs(std::string in, std::string out);
     std::pair<std::list<std::string>,double> djikstra(std::string in, std::string out);
-    std::unordered_set<std::string> airportsBfs(std::string in, int lim);
+    std::list<std::pair<std::string,int>> airportsBfs(std::string in, int lim);
+    std::list<std::pair<std::string,double>> airportsDijkstra(std::string in, double lim);
 };
 
 
