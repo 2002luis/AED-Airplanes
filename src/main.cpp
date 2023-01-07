@@ -85,15 +85,21 @@ int main() {
     Graph graph = data.getGraph();
 
 
-    std::cout << graph << std::endl << graph.bfs("CD1","CD6") << graph.djikstra("CD1","CD6").first << graph.djikstra("CD1","CD6").second;
+    //std::cout << graph << std::endl << graph.bfs("CD1","CD6") << graph.djikstra("CD1","CD6").first << graph.djikstra("CD1","CD6").second;
 
     GraphC graphCity = data.getCityGraph();
 
-    std::cout << graphCity << std::endl << graphCity.bfs("Lourosa","Gotland") << graphCity.citiesToAirports(graphCity.bfs("Lourosa","Gotland")) << graphCity.djikstra("Lourosa","Gotland").first << graphCity.djikstra("Lourosa","Gotland").second << graphCity.citiesToAirports(graphCity.djikstra("Lourosa","Gotland").first);
+    //std::cout << graphCity << std::endl << graphCity.bfs("Lourosa","Gotland") << graphCity.citiesToAirports(graphCity.bfs("Lourosa","Gotland")) << graphCity.djikstra("Lourosa","Gotland").first << graphCity.djikstra("Lourosa","Gotland").second << graphCity.citiesToAirports(graphCity.djikstra("Lourosa","Gotland").first);
 
-    std::cout << std::endl << std::endl << graph.airportsBfs("CD1",2) << std::endl << graph.airportsDijkstra("CD1",6000);
+    //std::cout << std::endl << std::endl << graph.airportsBfs("CD1",2) << std::endl << graph.airportsDijkstra("CD1",6000);
 
-    std::cout << std::endl << std::endl << graphCity.airportsBfs("Lourosa",2) << std::endl << graphCity.airportsDijkstra("Lourosa",6000);
+    //std::cout << std::endl << std::endl << graphCity.airportsBfs("Lourosa",2) << std::endl << graphCity.airportsDijkstra("Lourosa",6000);
+
+    std::unordered_set<std::string> comps;
+    comps.insert("AIR1");
+    comps.insert("AIR2");
+
+    std::cout << std::endl << std::endl << graphCity.bfs("Lourosa","Gotland",comps) << graphCity.airportsBfs("Lourosa",2,comps);
 
     return 0;
 }
