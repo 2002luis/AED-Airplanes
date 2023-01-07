@@ -11,6 +11,7 @@
 #include <list>
 #include <unordered_map>
 #include "Airport.h"
+#include "triple.h"
 
 class GraphC {
 private:
@@ -44,8 +45,8 @@ public:
     }
     std::list<std::string> bfs(std::string in, std::string out);
     std::pair<std::list<std::string>,double> djikstra(std::string in, std::string out);
-    std::list<std::pair<std::string,std::string>> citiesToAirports(std::list<std::string> in);
-    std::pair<std::string,std::string> findEdge(std::string in, std::string out);
+    std::list<triple<std::string,std::string,std::string>> citiesToAirports(std::list<std::string> in);
+    triple<std::string,std::string,std::string> findEdge(std::string in, std::string out);
 };
 
 

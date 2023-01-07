@@ -34,4 +34,10 @@ std::ostream& operator<<(std::ostream& os, std::list<std::pair<T,T>> a){
     return os;
 }
 
+template<class T1, class T2, class T3>
+std::ostream& operator<<(std::ostream& os, triple<T1,T2,T3> a){
+    os << a.first << "->" << a.second << " (" << a.third << ") ";
+    return os;
+}
+
 #endif //AED_AIRPLANE_OVERLOADS_H

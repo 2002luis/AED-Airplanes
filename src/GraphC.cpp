@@ -2,6 +2,8 @@
 #include <iostream>
 #include <queue>
 #include <unordered_map>
+#include <algorithm>
+#include "triple.h"
 
 GraphC::GraphC(){
     this->n=0;
@@ -63,7 +65,21 @@ std::list<std::string> GraphC::bfs(std::string in, std::string out){
     while(!toSearch.empty()){
         std::string cur = toSearch.front().back();
         this->nodes.find(cur)->second.visited = true;
-        if(cur == out) return toSearch.front();
+        if(cur == out)
+        {
+            /*
+            std::vector<std::string> temp2;
+            for(auto i : toSearch.front()){
+                if(std::find(temp2.begin(),temp2.end(),i)==temp2.end()) temp2.push_back(i);
+            }
+            std::list<std::string> end;
+            for(auto i : temp2){
+                end.push_back(i);
+            }
+            return end;
+             */
+            return toSearch.front();
+        }
         for(auto i : this->nodes.find(cur)->second.adj) {
             if (!this->nodes.find(i.dest)->second.visited) {
                 std::list<std::string> temp = toSearch.front();
@@ -117,12 +133,12 @@ std::pair<std::list<std::string>,double> GraphC::djikstra(std::string in, std::s
     return {empty,0};
 }
 
-std::list<std::pair<std::string,std::string>> GraphC::citiesToAirports(std::list<std::string> in){
-    std::list<std::pair<std::string,std::string>> out;
+std::list<triple<std::string,std::string,std::string>> GraphC::citiesToAirports(std::list<std::string> in){
+    std::list<triple<std::string,std::string,std::string>> out;
     std::string last = in.front();
     in.pop_front();
     for(auto i : in){
-        std::pair<std::string,std::string> airports = this->findEdge(last,i);
+        triple<std::string,std::string,std::string> airports = this->findEdge(last,i);
         out.push_back(airports);
         last = i;
         //out.push_back()
@@ -130,11 +146,11 @@ std::list<std::pair<std::string,std::string>> GraphC::citiesToAirports(std::list
     return out;
 }
 
-std::pair<std::string,std::string> GraphC::findEdge(std::string in, std::string out) {
+triple<std::string,std::string,std::string> GraphC::findEdge(std::string in, std::string out) {
     for(auto i : this->nodes.find(in)->second.adj){
         if(i.dest == out){
-            return {i.originAirport,i.destAirport};
+            return {i.originAirport,i.destAirport,i.company};
         }
     }
-    return {"",""};
+    return {"","",""};
 }
