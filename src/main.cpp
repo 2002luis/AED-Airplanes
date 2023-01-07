@@ -93,5 +93,7 @@ int main() {
 
     std::cout << std::endl << std::endl << graph.airportsBfs("CD1",2) << std::endl << graph.airportsDijkstra("CD1",6000);
 
+    std::cout << std::endl << std::endl << graphCity.airportsBfs("Lourosa",2) << std::endl << graphCity.airportsDijkstra("Lourosa",6000);
+
     return 0;
 }

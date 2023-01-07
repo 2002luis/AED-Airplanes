@@ -119,10 +119,6 @@ std::pair<std::list<std::string>,double> Graph::djikstra(std::string in, std::st
     return {empty,0};
 }
 
-bool sortBy2nd(std::pair<std::string,int> p1, std::pair<std::string,int> p2){
-    return(p1.second<p2.second);
-}
-
 std::list<std::pair<std::string,int>> Graph::airportsBfs(std::string in, int lim){
     this->removeVisited();
 
