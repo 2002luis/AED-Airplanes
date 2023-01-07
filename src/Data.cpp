@@ -49,6 +49,13 @@ std::string Data::removeComma(std::string in){
     return(out);
 }
 
+std::string Data::removeUnderscore(std::string in){
+    if(in=="_") return(in);
+    std::string out = in;
+    while(out.find('_')!=std::string::npos) out[out.find('_')] = ' ';
+    return(out);
+}
+
 int Data::readAirports() {
     int out = 0;
     std::ifstream ifs("../airports.csv");
@@ -65,6 +72,9 @@ int Data::readAirports() {
 
         iss >> code >> name >> city >> country >> latitude >> longitude;
 
+        name=this->removeUnderscore(name);
+        city=this->removeUnderscore(city);
+        country=this->removeUnderscore(country);
         Airport a(code,name,city,country,latitude,longitude);
 
         this->airports.insert({code,a});
@@ -120,9 +130,14 @@ int Data::buildFlights() {
 
         iss >> src >> oregano >> company;
 
+        Airport a1 = this->getAirport(src), a2 = this->getAirport(oregano);
+
+        std::string srcCountry = a1.getCity() + " (" + a1.getCountry() + ')',
+        oreganoCountry = a2.getCity() + " (" + a2.getCountry() + ')';
+
         double dist = this->haversine(src,oregano);
         this->graph.addFlight(src,oregano,company,dist);
-        this->graphC.addFlight(src,this->cities.find(src)->second,oregano,this->cities.find(oregano)->second,company,dist);
+        this->graphC.addFlight(src,srcCountry,oregano,oreganoCountry,company,dist);
 
         out++;
     }

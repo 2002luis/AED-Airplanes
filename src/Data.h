@@ -28,6 +28,7 @@ private:
     int readAirlines();
     int buildFlights();
     std::string removeComma(std::string in);
+    std::string removeUnderscore(std::string in);
     double haversine(std::string source, std::string destination);
 public:
     Data();

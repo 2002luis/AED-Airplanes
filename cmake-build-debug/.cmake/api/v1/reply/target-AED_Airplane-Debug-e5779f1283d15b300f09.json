@@ -2,10 +2,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "AED_Airplane.exe"
-		},
-		{
-			"path" : "AED_Airplane.pdb"
+			"path" : "AED_Airplane"
 		}
 	],
 	"backtrace" : 1,
@@ -39,9 +36,6 @@
 			[
 				{
 					"fragment" : "-g"
-				},
-				{
-					"fragment" : "-std=gnu++14"
 				}
 			],
 			"language" : "CXX",
@@ -77,16 +71,12 @@
 			{
 				"fragment" : "",
 				"role" : "flags"
-			},
-			{
-				"fragment" : "-lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32",
-				"role" : "libraries"
 			}
 		],
 		"language" : "CXX"
 	},
 	"name" : "AED_Airplane",
-	"nameOnDisk" : "AED_Airplane.exe",
+	"nameOnDisk" : "AED_Airplane",
 	"paths" : 
 	{
 		"build" : ".",

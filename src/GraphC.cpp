@@ -11,11 +11,12 @@ GraphC::GraphC(){
 }
 
 int GraphC::addAirport(Airport a) {
-    if(this->nodes.find(a.getCity())==this->nodes.end()){
-        this->nodes.insert({a.getCity(),{}});
+    std::string cityCountry = a.getCity() + " (" + a.getCountry() + ')';
+    if(this->nodes.find(cityCountry)==this->nodes.end()){
+        this->nodes.insert({cityCountry,{}});
         this->n++;
     }
-    this->nodes.find(a.getCity())->second.airports.push_back(a.getCode());
+    this->nodes.find(cityCountry)->second.airports.push_back(a.getCode());
     return this->n;
 }
 
@@ -25,6 +26,8 @@ bool GraphC::addFlight(std::string source, std::string sourcecity, std::string d
 
 bool GraphC::addFlight(std::string source, std::string sourcecity, std::string dest, std::string destcity, std::string company, double weight) {
     if(this->nodes.find(sourcecity) == this->nodes.end() || this->nodes.find(destcity) == this->nodes.end()) return false;
+
+
 
     Edge e;
     e.originAirport = source;
@@ -228,6 +231,7 @@ std::list<triple<std::string,std::string,std::string>> GraphC::citiesToAirports(
 }
 
 std::list<triple<std::string,std::string,std::string>> GraphC::citiesToAirports(std::list<std::string> in, std::unordered_set<std::string> comp){
+    if(in.size()==0) return {};
     std::list<triple<std::string,std::string,std::string>> out;
     std::string last = in.front();
     in.pop_front();

@@ -99,7 +99,7 @@ int main() {
     comps.insert("AIR1");
     comps.insert("AIR2");
 
-    std::cout << std::endl << std::endl << graphCity.bfs("Lourosa","Gotland",comps) << graphCity.airportsBfs("Lourosa",2,comps);
+    std::cout << std::endl << std::endl << graphCity.bfs("Lourosa (Portugal)","Gotland (Suecia)",comps) << graphCity.airportsBfs("Lourosa (Portugal)",2,comps) << graphCity.citiesToAirports(graphCity.bfs("Lourosa (Portugal)","Gotland (Suecia)",comps),comps);
 
     return 0;
 }
