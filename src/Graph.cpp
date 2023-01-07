@@ -5,6 +5,8 @@
 #include "Graph.h"
 #include <iostream>
 #include <queue>
+#include "unordered_set"
+#include <algorithm>
 
 Graph::Graph(){
     this->n=0;
@@ -116,3 +118,80 @@ std::pair<std::list<std::string>,double> Graph::djikstra(std::string in, std::st
     std::list<std::string> empty;
     return {empty,0};
 }
+
+bool sortBy2nd(std::pair<std::string,int> p1, std::pair<std::string,int> p2){
+    return(p1.second<p2.second);
+}
+
+std::list<std::pair<std::string,int>> Graph::airportsBfs(std::string in, int lim){
+    this->removeVisited();
+
+    std::list<std::pair<std::string,int>> temp1;
+
+    this->nodes.find(in)->second.visited=true;
+    temp1.push_back({in,0});
+
+    std::queue<std::list<std::string>> toSearch;
+    for(auto i : this->nodes.find(in)->second.adj){
+        toSearch.push({in,i.dest});
+    }
+
+    while(!toSearch.empty() && toSearch.front().size()<=lim){
+        std::string cur = toSearch.front().back();
+        this->nodes.find(cur)->second.visited = true;
+
+        for(auto i : this->nodes.find(cur)->second.adj) {
+            if (!this->nodes.find(i.dest)->second.visited) {
+                std::list<std::string> temp = toSearch.front();
+                temp.push_back(i.dest);
+                toSearch.push(temp);
+            }
+        }
+        temp1.push_back({toSearch.front().back(),toSearch.front().size()-1});
+        toSearch.pop();
+    }
+
+    while(!toSearch.empty()){
+        temp1.push_back({toSearch.front().back(),toSearch.front().size()-1});
+        toSearch.pop();
+    }
+
+    return temp1;
+}
+
+std::list<std::pair<std::string,double>> Graph::airportsDijkstra(std::string in, double lim){
+
+    this->removeVisited();
+    std::list<std::pair<std::string,double>> temp1;
+
+    this->nodes.find(in)->second.visited=true;
+    temp1.push_back({in,0});
+
+    std::priority_queue<std::pair<std::list<std::string>,double>, std::vector<std::pair<std::list<std::string>,double>>,mycomparison> toSearch;
+    for(auto i : this->nodes.find(in)->second.adj){
+        std::list<std::string> lst;
+        std::pair<std::list<std::string>,double> tmp({in,i.dest},i.weight);
+        toSearch.push(tmp);
+    }
+
+    while(!toSearch.empty() && toSearch.top().second<=lim){
+        auto cur = toSearch.top();
+        this->nodes.find(cur.first.back())->second.visited=true;
+        toSearch.pop();
+        temp1.push_back({cur.first.back(),cur.second});
+        for(auto i : this->nodes.find(cur.first.back())->second.adj) {
+            if (!this->nodes.find(i.dest)->second.visited) {
+                std::list<std::string> temp = cur.first;
+                temp.push_back(i.dest);
+                //if (i.dest == out) return {temp,toSearch.top().second+i.weight};
+                toSearch.push({temp,cur.second+i.weight});
+            }
+        }
+    }
+
+
+    std::list<std::string> empty;
+    return temp1;
+}
+
+

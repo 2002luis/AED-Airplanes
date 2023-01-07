@@ -21,6 +21,9 @@ private:
     std::unordered_map<std::string,Airport> airports;
     std::unordered_map<std::string,Airlines> airlines;
     std::unordered_map<std::string,std::string> cities; //GIVE AIRPORT GET CITY
+    std::unordered_map<std::string,std::list<std::string>> countries; // GIVE COUNTRY GET AIRPORTS
+    std::unordered_map<std::string,std::string> citiesInCountries; //GIVE CITY GET COUNTRY
+    std::unordered_set<std::string> cityList;
     int readAirports();
     int readAirlines();
     int buildFlights();
@@ -31,6 +34,9 @@ public:
     Airport getAirport(std::string in);
     Airlines getAirline(std::string in);
     std::string getAirportFromCity(std::string in);
+    std::list<std::string> getAirportsInCountry(std::string in);
+    std::string getCountry(std::string in);
+
     Graph getGraph();
     GraphC getCityGraph();
 };

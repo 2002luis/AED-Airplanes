@@ -11,6 +11,7 @@
 #include <list>
 #include <unordered_map>
 #include "Airport.h"
+#include "unordered_set"
 
 class Graph {
 private:
@@ -41,6 +42,8 @@ public:
     }
     std::list<std::string> bfs(std::string in, std::string out);
     std::pair<std::list<std::string>,double> djikstra(std::string in, std::string out);
+    std::list<std::pair<std::string,int>> airportsBfs(std::string in, int lim);
+    std::list<std::pair<std::string,double>> airportsDijkstra(std::string in, double lim);
 };
 
 
