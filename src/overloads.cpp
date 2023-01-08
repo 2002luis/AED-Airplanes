@@ -10,6 +10,7 @@
 #include "Airport.h"
 #include "Airlines.h"
 #include "Graph.h"
+#include "GraphC.h"
 
 std::ostream& operator<<(std::ostream& os, Airport a){
     os << std::endl;
@@ -27,6 +28,22 @@ std::ostream& operator<<(std::ostream& os, Graph a){
     os << std::endl;
     for(auto i: a.getNodes()){
         os << i.first << " liga a: ";
+        for(auto j: i.second.adj){
+            os << j.dest << " (" << j.company << ' ' << j.weight << ") \t";
+        }
+        os << std::endl << std::endl;
+    }
+    return os;
+}
+
+std::ostream& operator<<(std::ostream& os, GraphC a){
+    os << std::endl;
+    for(auto i: a.getNodes()){
+        os << "Os aeroportos na cidade " << i.first << " sao: \n";
+        for(auto j : i.second.airports){
+            os << j << '\t';
+        }
+        os << std::endl << i.first << " liga a: ";
         for(auto j: i.second.adj){
             os << j.dest << " (" << j.company << ' ' << j.weight << ") \t";
         }
